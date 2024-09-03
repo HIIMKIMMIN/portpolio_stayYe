@@ -364,6 +364,7 @@
   background-color: inherit;
   padding: 5px 10px;
   box-sizing: border-box;
+  color: #979797;
 }
 .content2 .info_area .btn_rv:hover{
   background: #979797
