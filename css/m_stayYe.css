@@ -1,0 +1,143 @@
+@charset "utf-8";
+.logo{
+    position: fixed;
+    top: 30px; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 50px;
+    animation: reveseDrop 0.5s;
+    z-index: 100;
+  }
+  .logo.drop{
+    animation: logoDrop 0.5s;
+    top: 20px; left: 50%;
+    transform: translateX(-50%);
+  }
+  @keyframes logoDrop{
+    50%{
+     opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @keyframes reveseDrop{
+    50%{
+      opacity: 0;
+    }
+    100%{
+    opacity: 1;
+    }
+  }
+  /* logo */
+
+
+  .main_visual_wrap .title{
+    font-size: 16px;
+  }
+  .main_visual_wrap .title strong{
+    font-size: 25px;
+  }
+  .main_visual_wrap .title strong::after{
+    top: 30%; left: 50%;
+  }
+  .main_visual{
+    width: 100%; height: 100vh;
+  }
+  /* main_visual */
+
+  .gnb ul{
+    display: block;
+    position: fixed;
+    right: -60%; top: 0;
+    z-index: 100;
+    background: #fff;
+    width: 60%;
+    height: 100vh;
+    line-height: 3;
+    padding: 15% 10%;
+    box-sizing: border-box;
+    transition: right 0.5s ease; /* 애니메이션 설정 */
+}
+.gnb.on ul{
+  right: 0;
+}
+.gnb ul li a:hover::after{
+    transform: scaleX(1.2);
+    transition: all 0.5s;
+  }
+
+  .gnb.drop{
+    height: 12vh;
+    display: block;
+
+  }
+  /* gnb */
+
+.btn_menu{
+    display: block;
+    position: fixed;
+    z-index: 101;
+    right: 20px; top: 20px;
+    width: 50px;
+    height: 50px;
+    background: none;
+    background: url(../img/menuBar_b.png) no-repeat center/cover;
+    transition: all 0.5s;
+}
+.btn_menu.on{
+    background: url(../img/closeIcon.png)no-repeat center/cover;
+    width: 40px;
+    height: 40px;
+}
+.m_util{
+    position: fixed;
+    left: 20px; top: 30px;
+    z-index: 101;
+    display: flex;
+    width: 18%;
+    justify-content: space-between;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'GowunBatang-Regular';
+ }
+ .m_util button{background: none;}
+ /* mobile use */
+
+ .inner{
+    width: 100%;
+  }
+
+
+
+  .content p.title,
+  .content2 p.title{
+    padding: 50px 0;
+  }
+  .content2 .cont_box_area{
+    display: block;
+    width: 100%;
+  }
+  .content2 .cont_box_area .cont_box{
+    width: 90%;
+    margin: 0 auto 0;
+    padding: 0;
+  }
+  /* .content2 */
+
+
+  .sc_visual{
+    height: 40vh;
+    margin-bottom: 100px;
+  }
+  .sc_visual .title p{font-size: 14px;}
+  .sc_visual .title p:first-child{font-size: 18px;}
+  .sc_visual .title a{font-size: 14px;}
+  .content3{
+    display: block
+  }
+  .content3 > div{
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+  }
+  .content3 > .text_area{display: none;}

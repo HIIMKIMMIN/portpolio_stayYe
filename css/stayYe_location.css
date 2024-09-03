@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+.btn_menu{display: none;}
+.m_util{display: none;}
+/* moblie use */
+.logo{
+    position: fixed;
+    top: 20px; left: 40px;
+    width: 80px; height: 80px;
+    z-index: 10;
+    animation: reveseDrop 0.5s;
+    cursor: pointer;
+  }
+  .logo img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .logo.drop{
+    top: 10px; left: 40px;
+    width: 60px; height: 60px;
+    z-index: 101;
+    animation: logoDrop 0.5s;
+  }
+  @keyframes logoDrop{
+    0%{
+      width: 80px;
+      height: 80px;
+    }
+    100%{
+      width: 60px;
+      height: 60px;
+    }
+  }
+  @keyframes reveseDrop{
+    0%{
+      width: 60px;
+      height: 60px;
+    }
+    100%{
+      width: 80px;
+      height: 80px;
+    }
+  }
+  /* logo */
+  .main_visual_wrap{position: relative;}
+  .main_visual_wrap .title{
+    color: #fff;
+    position: absolute;
+    top: 60%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 2;
+    font-size: 40px;
+    font-family: 'MaruBuriLight';
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: top 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+}
+.main_visual_wrap .title::after{
+    content: '';
+    position: absolute;
+    top: 80%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 150px; height: 2px;
+  }
+.main_visual{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/sub5_map_bg.jpg) fixed;
+}
+/* main_visual*/
+.gnb{
+    position: fixed;
+    top: 20px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 100%;
+    line-height: 80px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0); /* 초기 배경색을 투명하게 설정 */
+    transition: background-color 0.3s ease-in-out; /* 애니메이션 효과 */
+    animation: rdropGnb 1.5s;
+  }
+  .gnb ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+  }
+  .gnb ul li a{
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 100px rgba(0, 0, 0, 1);
+    font-size: 16px;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'GowunBatang-Regular';
+    font-weight: 500;
+  }
+  .gnb ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -10px; left: 0;
+    width: 100%;
+    transform: scale(0);
+    height: 1px;
+    background:rgba(255, 255, 255);;
+  }
+  .gnb ul li a:hover{
+    color: rgba(255, 255, 255);
+    transition: all 0.3s;
+  }
+  .gnb ul li a:hover::after{
+    transform: scaleX(1.5);
+    transition: all 0.5s;
+  }
+  .gnb.drop{
+    position: fixed;
+    line-height: 80px;
+    animation: dropGnb 0.8s;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5); /* 배경색 변경 */
+    width: 100%;
+  }
+  .gnb.drop a{
+    color: #ccc;
+  }
+  .gnb.drop ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -10px; left: 0;
+    width: 100%;
+    transform: scale(0);
+    height: 1px;
+    background: #ccc;
+  }
+  .gnb.drop ul li a:hover{
+    color: #fff;
+    transition: all 0.3s;
+  }
+  .gnb ul li a:hover::after{
+    transform: scaleX(1.5);
+    transition: all 0.5s;
+  }
+  @keyframes dropGnb{
+    0%{
+      top: -10px;
+    }
+    100%{
+      top: 0;
+    }
+}
+  @keyframes rdropGnb{
+    0%{
+      top: 0px;
+    }
+    100%{
+      top: 20px;
+    }
+  }
+  /* gnb */
+
+
+
+  .inner{
+    width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+  }
+  .content{
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin-bottom: 150px;
+  }
+  .content figure > img{
+    width: 200px;
+    border-radius: 50%;
+    height: auto;
+  }
+  .title{
+    padding: 100px 0 50px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'GowunBatang-Regular';
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 2;
+    position: relative;
+    margin-bottom: 50px;
+}
+.title span{
+  font-size: 24px;
+  padding-top: 40px;
+  display: block;
+  font-family: 'MaruBuriBold';
+}
+  .title::after{
+    content: '';
+    position: absolute;
+    width: 100%; height: 1px;
+    background-color: #97979770;
+    left: 0; bottom: 0;
+  }
+  .content .text_area{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'MaruBuriSemiBold';
+    color: #505050;
+    line-height: 2;
+  }
+  .content .text_area span{
+    font-family: 'MaruBuriBold';
+    font-size: 22px;
+    padding: 60px 0 40px;
+    display: block;
+  }
+  .content .img_area{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  .content .img_area img{
+    width: 48.5%;
+  }
+  /* content1*/
+  .content2 {margin-bottom: 100px;}
+  .content2 .root_daum_roughmap{
+    width: 100%;
+  }
+  .content2 .info_text_list{margin-top: 100px;}
+  .content2 .info_text_list li{margin-bottom: 50px; color: #505050;}  
+  .content2 .info_text_list li h3{
+    font-size: 22px;
+    font-family: 'GowunBatang-Regular';
+    font-weight: 700;
+    display: block;
+    margin-bottom: 20px;
+    color: #111;
+  }  
+  .content2 .info_text_list li strong{
+    font-weight: 500;
+  }
+  .content2 .info_text_list li span{
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+  }
+  /* content2 - 지도 */
+
+
+
+
+  .util{
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .util div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .util p{
+    margin: 40px 0;
+    font-size: 20px;
+    color: #777;
+    font-family: 'MaruBuriLight';
+  }
+  /* util */
+  
+  footer{
+    border-top: 1px solid #97979770;
+    text-align: center;
+    color: #979797;
+    font-size: 14px;
+  }
+  footer span{
+    font-size: 15px;
+    color: #505050;
+  }
+  footer div{
+    padding: 40px 0;
+    line-height: 1.5;
+  }
+  footer .btn_modeChange{
+    margin-top: 20px;
+    display: inline-block;
+    border-bottom: 1px solid #505050;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #505050;
+    cursor: pointer;
+  }

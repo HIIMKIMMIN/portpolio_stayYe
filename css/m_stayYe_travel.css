@@ -1,0 +1,185 @@
+@charset "utf-8";
+.logo{
+    top: 30px; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 50px;
+    animation: reveseDrop 0.5s;
+  }
+  .logo.drop{
+    animation: logoDrop 0.5s;
+    top: 20px; left: 50%;
+    transform: translateX(-50%);
+  }
+  @keyframes logoDrop{
+    50%{
+     opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @keyframes reveseDrop{
+    50%{
+      opacity: 0;
+    }
+    100%{
+    opacity: 1;
+    }
+  }
+  /* logo */
+
+
+
+
+  .main_visual_wrap{
+    width: 100%;
+  }
+  .main_visual_wrap .title{
+    font-size: 25px;
+  }
+  .main_visual_wrap .title strong{
+    font-size: 25px;
+  }
+  .main_visual_wrap .title strong::after{
+    top: 30%; left: 50%;
+  }
+  /* main_visual */
+
+
+
+
+  .gnb{
+    top: 0;
+    z-index: 102;
+   }
+ .gnb ul{
+    display: block;
+    position: fixed;
+    right: -60%; top: 0px;
+    z-index: 100;
+    background: #fff;
+    width: 60%;
+    height: 100vh;
+    line-height: 3;
+    padding: 15% 10%;
+    box-sizing: border-box;
+    right: -60%; /* 처음 위치 */
+    transition: right 0.5s ease; /* 애니메이션 설정 */
+ }
+ .gnb.on ul{
+   right: 0; 
+ }
+ .gnb ul li a{
+   color:  rgba(0, 0, 0, 0.6);font-family: 'GowunBatang-Regular';
+ }
+ .gnb.on ul li a:hover{
+   color: rgba(0,0,0);
+ }
+ .gnb ul li a:hover::after{
+     transform: scaleX(1.2);
+     transition: all 0.5s;
+     background:  rgba(0, 0, 0, 0.6);
+ }
+ .gnb.drop{
+    height: 12vh;
+     top: 0; left: 50%;
+     transform: translateX(-50%);
+     z-index: 100;
+     background-color: rgba(255,255,255); /* 배경색 변경 */
+     width: 100%;
+     animation: dropGnb 0.8s;
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+ }
+ .gnb.drop  a{
+   color: rgba(0, 0, 0, 0.6);
+ }
+ .gnb.drop ul li a::after{
+   content: '';
+   position: absolute;
+   bottom: -10px; left: 0;
+   width: 100%;
+   transform: scale(0);
+   height: 1px;
+   background: #000;
+ }
+ .gnb.drop ul li a:hover{
+   color: #000;
+   transition: all 0.3s;
+ }
+ .gnb ul li a:hover::after{
+   transform: scaleX(1);
+   transition: all 0.5s;
+ }
+   @keyframes dropGnb{
+     0%{
+       top: 0px;
+     }
+     100%{
+       top: 0;
+     }
+   }
+   @keyframes rdropGnb{
+     0%{
+       top: 0px;
+     }
+     100%{
+       top: 0px;
+     }
+   }
+   /* gnb */
+
+
+.inner{
+  width: 100%;
+}
+.content .text_area{
+  width: 80%;
+  margin: 50px auto;
+}
+
+
+.travel_list{
+  display: block;
+  text-align: center;
+}
+.travel_list li{
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto 100px; 
+}
+.travel_list li .info_text{
+  margin: 20px auto;
+  text-align: left;
+}
+/* content */
+
+.btn_menu{
+    display: block;
+    position: fixed;
+    z-index: 101;
+    right: 20px; top: 30px;
+    width: 50px;
+    height: 50px;
+    background: none;
+    background: url(../img/menuBar_b.png) no-repeat center/cover;
+    transition: all 0.5s;
+    z-index: 103;
+}
+.btn_menu.on{
+    background: url(../img/closeIcon.png)no-repeat center/cover;
+    width: 40px;
+    height: 40px;
+}
+.m_util{
+    position: fixed;
+    left: 20px; top: 40px;
+    z-index: 101;
+    display: flex;
+    width: 18%;
+    justify-content: space-between;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'GowunBatang-Regular';
+}
+.m_util button{background: none;}
+ /* mobile use */
